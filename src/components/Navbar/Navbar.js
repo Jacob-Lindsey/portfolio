@@ -8,7 +8,10 @@ const Navbar = () => {
     return (
         <nav className={styles.container}>
             <a href="/" className={styles.homeLink}>
-                <span className={styles.logo}>LOGO</span>
+                <span className={styles.logo}>
+                    <span>J<span className={styles.mirroredLetter}>J</span></span>
+                    <div className={styles.logoSubtext}>JACOB LINDSEY</div>
+                </span>
             </a>
             <button
                 type="button"
