@@ -32,7 +32,7 @@
 }
 
 #navbarToggle[aria-expanded='true'] + #navbarMenu {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--overlay-color);
     opacity: 1;
     visibility: visible;
 }
@@ -50,6 +50,24 @@
     right: 0;
     top: 64px;
     visibility: hidden;
+}
+
+#navbarMenu div span {
+    align-items: center;
+    display: flex;
+    order: -1;
+}
+
+#navbarMenu ul {
+    flex-direction: column;
+}
+
+#navbarMenu li {
+    color: var(--text-color);
+}
+
+#navbarMenu li:first-child {
+    order: 1;
 }
 
 .iconBar {
@@ -70,7 +88,7 @@
 
 .logo {
     align-items: center;
-    color: #f0e164;
+    color:  var(--logo-color);
     display: flex;
     font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 1.7rem;
@@ -117,6 +135,14 @@
         display: flex;
     }
 
+    #navbarMenu ul {
+        flex-direction: row;
+    }
+
+    #navbarMenu li:first-child {
+        order: -1;
+    }
+
     .wrapper {
         display: flex;
         flex-direction: row;
@@ -146,7 +172,7 @@
     }
     
     .logoSubtext {
-        color: #eee;
+        color: var(--text-color);
         font-size: .66rem;
         visibility: visible;
     }
