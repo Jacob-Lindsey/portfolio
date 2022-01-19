@@ -18,6 +18,11 @@
   --input-color: transparent;
   --input-border-color: rgba(112, 112, 112, 0.4);
   --placeholder-color: rgb(177, 177, 177);
+  --checkbox-bg-color: rgb(33,33,33);
+  --toggle-icon: "\f185";
+  --toggle-icon-bg-color: rgb(211, 211, 211);
+  --toggle-icon-color: rgb(136, 88, 0);
+  --link-hover-color: rgb(23, 29, 80);
 }
 
 html.theme-transition,
@@ -36,6 +41,11 @@ html.theme-transition *::after {
   --input-color: #171717;
   --input-border-color: rgba(141, 140, 140, 0.4);
   --placeholder-color: rgb(56, 56, 56);
+  --checkbox-bg-color: #485fc7;
+  --toggle-icon: "\f186";
+  --toggle-icon-bg-color: rgb(204, 204, 204);
+  --toggle-icon-color: rgb(59, 0, 153);
+  --link-hover-color: rgb(141, 214, 243);
 }
 
 html, body {
@@ -55,8 +65,32 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
+.switch+label {
+  position: relative !important;
+}
+
+.switch+label::before {
+  background: var(--checkbox-bg-color) !important;
+}
+
+.switch+label::after {
+  background-color: var(--toggle-icon-bg-color) !important;
+  color: var(--toggle-icon-color);
+  content: var(--toggle-icon) !important;
+  font-family: 'Font Awesome 5 Free' !important;
+  font-size: 11px;
+  position: absolute !important;
+}
+
 a {
+  border-bottom: 1px solid transparent;
+  color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--link-hover-color);
+  color: var(--link-hover-color);
 }
 
 ul {
