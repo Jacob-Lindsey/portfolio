@@ -1,7 +1,9 @@
 const Portfolio = () => {
 
     return (
-        <h1>Portfolio</h1>
+        <section className="container is-max-desktop">
+           Portfolio 
+        </section>
     )
 
 };

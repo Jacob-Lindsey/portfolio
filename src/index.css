@@ -12,6 +12,8 @@
 
 :root {
   --bg-color: #eee;
+  --bg-color-lighter: hsl(0, 0%, 89%);
+  --bg-color-lightest: hsl(0, 0%, 84%);
   --text-color: #111;
   --overlay-color: #888;
   --logo-color: #08001f;
@@ -35,6 +37,8 @@ html.theme-transition *::after {
 
 [data-theme="dark"] {
   --bg-color: #161616;
+  --bg-color-lighter: hsl(0, 0%, 13%);
+  --bg-color-lightest: hsl(0, 0%, 18%);
   --text-color: #eee;
   --overlay-color: #101010;
   --logo-color: #f0e164;
@@ -130,4 +134,71 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .navbar-menu {
   display: inherit !important;
+}
+
+#bio-icons {
+  column-gap: 20px;
+  display: grid;
+  font-size: 3.5rem;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  row-gap: 40px;
+  text-align: center;
+}
+
+#bio-icons span {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  transition: all 0.2s ease;
+
+}
+
+#bio-icons span:hover {
+  transform: translate(0, -16px);
+}
+
+#bio-icons span h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  #bio-icons span {
+    height: 200px;
+    width: 200px;
+  }
+} 
+
+@media screen and (min-width: 1024px) {
+
+  #bio-icons {
+    column-gap: 20px;
+    font-size: 5rem;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 6rem;
+    row-gap: 40px;
+    
+  }
+
+  #bio-icons span h3 {
+    font-size: 1.5rem;
+    height: 0;
+    margin-top: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+
+  #bio-icons span:hover h3 {
+    height: 32px;
+    margin-top: 1rem;
+  }
 }
