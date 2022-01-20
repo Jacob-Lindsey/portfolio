@@ -3,10 +3,10 @@ import SkillIcon from "../SkillIcon/SkillIcon";
 const Bio = () => {    
 
     return (
-        <section className="is-max-desktop">
+        <section id="bio" className="is-max-desktop">
+            <h1 className="is-size-2-mobile is-size-3-desktop">BIO</h1>
             <div className="container">
-                <h1 className="is-size-2-mobile is-size-3-desktop">Bio</h1>
-                <div id="bio-icons">
+                <div id="bio-icons" className="is-grid">
                     <SkillIcon 
                         iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                         iconTitle="HTML"

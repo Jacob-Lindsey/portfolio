@@ -134,9 +134,46 @@ label {
   display: inherit !important;
 }
 
+.card {
+  color: #e7e7e7 !important;
+}
+
+.card-footer-item {
+  border-bottom: 2px solid transparent !important;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.is-borderless {
+  border: 0 !important;
+}
+
+.is-grid {
+  display: grid;
+}
+
+.project-grid {
+  row-gap: 40px;
+  grid-row-gap: 40px;
+  margin-top: 6rem;
+}
+
+#portfolio {
+  padding-top: 3rem;
+}
+
+.has-radius-10 {
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.card {
+  background-color: rgb(35, 35, 59);
+}
+ 
 #bio-icons {
   column-gap: 20px;
-  display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr;
@@ -174,6 +211,12 @@ label {
   #bio-icons div {
     height: 200px;
     width: 200px;
+  }
+
+  .project-grid {
+    column-gap: 20px;
+    grid-column-gap: 20px;
+
   }
 } 
 
@@ -216,8 +259,16 @@ label {
     width: 75px;
   }
 
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 .icon-transition {
   transition: all 0.3s ease !important;
+}
+
+.express {
+  filter: invert(100%) !important;
 }

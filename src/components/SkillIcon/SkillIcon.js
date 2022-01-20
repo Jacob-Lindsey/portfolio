@@ -1,36 +1,20 @@
-import { useState, useEffect } from "react";
+import useStickyState from "../../utils/useStickyState";
 
 const SkillIcon = (props) => {
-
-    const [colored, setColored] = useState(null);
-
-    useEffect(() => {
-        window.screen.width <= 768 ? setColored('colored') : setColored(null);
-    },[setColored]);
-
-    const detectWindowSize = () => {
-        window.innerWidth <= 768 ? setColored('colored') : setColored(null);
-    };
-
-    window.onresize = detectWindowSize;
+    
+    const [theme] = useStickyState('dark', 'theme');
 
     const iconURL = props.iconURL;
     const iconTitle = props.iconTitle;
+    let isInvert;
 
-    const handleMouseEnter = (e) => {
-        setColored('colored');
-    };
-
-    const handleMouseLeave = (e) => {
-        setColored(null);
-    };
+    if (iconTitle === "Express") {
+        isInvert = theme === "dark" ? true : false;
+    }
 
     return (
-        <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-            <img src={iconURL} className={`icon-transition`} alt={iconTitle} />
+        <div>
+            <img src={iconURL} className={`icon-transition ${isInvert ? 'express' : ''}`} alt={iconTitle} />
             <h3>{iconTitle}</h3>
         </div>
     )
