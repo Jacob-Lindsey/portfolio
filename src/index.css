@@ -11,10 +11,11 @@
 }
 
 :root {
-  --bg-color: #eee;
+  --bg-color: #e7e7e7;
   --bg-color-lighter: hsl(0, 0%, 89%);
   --bg-color-lightest: hsl(0, 0%, 84%);
   --text-color: #111;
+  --header-bg-color: #e7e7e7;
   --overlay-color: #888;
   --logo-color: #08001f;
   --input-color: transparent;
@@ -40,6 +41,7 @@ html.theme-transition *::after {
   --bg-color-lighter: hsl(0, 0%, 13%);
   --bg-color-lightest: hsl(0, 0%, 18%);
   --text-color: #eee;
+  --header-bg-color: #161616;
   --overlay-color: #101010;
   --logo-color: #f0e164;
   --input-color: #171717;
@@ -120,10 +122,6 @@ label {
   color: var(--placeholder-color) !important;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
 #root, #__next {
   isolation: isolate;
 }
@@ -139,38 +137,41 @@ p, h1, h2, h3, h4, h5, h6 {
 #bio-icons {
   column-gap: 20px;
   display: grid;
-  font-size: 3.5rem;
   grid-column-gap: 20px;
   grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  padding-top: 3rem;
   row-gap: 40px;
   text-align: center;
 }
 
-#bio-icons span {
+#bio-icons div {
   align-items: center;
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.301) -1px 0px 8px 0px;
   display: flex;
   flex-direction: column;
-
+  height: 150px;
   justify-content: center;
   transition: all 0.2s ease;
+  width: 150px;
 
 }
 
-#bio-icons span:hover {
-  transform: translate(0, -16px);
+#bio-icons div img {
+  height: 50px;
+  width: 50px;
 }
 
-#bio-icons span h3 {
+#bio-icons div h3 {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {
-  #bio-icons span {
+  #bio-icons div {
     height: 200px;
     width: 200px;
   }
@@ -180,25 +181,43 @@ p, h1, h2, h3, h4, h5, h6 {
 
   #bio-icons {
     column-gap: 20px;
-    font-size: 5rem;
     grid-column-gap: 20px;
     grid-row-gap: 40px;
     grid-template-columns: repeat(3, 1fr);
     padding-top: 6rem;
-    row-gap: 40px;
-    
+    row-gap: 40px; 
   }
-
-  #bio-icons span h3 {
-    font-size: 1.5rem;
+  
+  #bio-icons div h3 {
+    font-size: 20px;
+    line-height: 1.6;
     height: 0;
     margin-top: 0;
     overflow: hidden;
     transition: all 0.2s ease;
   }
 
-  #bio-icons span:hover h3 {
-    height: 32px;
-    margin-top: 1rem;
+  #bio-icons div img {
+    filter: grayscale(100%);
+    transition: all 0.2s ease;
   }
+
+  #bio-icons div:hover img {
+    filter: grayscale(0%);
+  }
+
+  #bio-icons div:hover h3 {
+    height: 32px;
+    margin-top: 0.2rem;
+  }
+
+  #bio-icons div img {
+    height: 75px;
+    width: 75px;
+  }
+
+}
+
+.icon-transition {
+  transition: all 0.3s ease !important;
 }

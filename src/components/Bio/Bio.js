@@ -1,60 +1,61 @@
-const Bio = () => {
+import SkillIcon from "../SkillIcon/SkillIcon";
+
+const Bio = () => {    
 
     return (
-        <div className="is-max-desktop">
-            <h1 className="is-size-2-mobile is-size-3-desktop pb-6">Bio</h1>
-            <div id="bio-icons">
-                <span>
-                    <i className="devicon-html5-plain" />
-                    <h3>HTML</h3>
-                </span>
-                <span>
-                    <i className="devicon-css3-plain" />
-                    <h3>CSS</h3>
-                </span>
-                <span>
-                    <i className="devicon-javascript-plain" />
-                    <h3>Javascript</h3>
-                </span>
-                <span>
-                    <i className="devicon-react-original" />
-                    <h3>React</h3>
-                </span>
-                <span>
-                    <i className="devicon-nodejs-plain" />
-                    <h3>Node</h3>
-                </span>
-                <span>
-                    <i className="devicon-express-original" />
-                    <h3>Express</h3>
-                </span>
-                <span>
-                    <i className="devicon-python-plain" />
-                    <h3>Python</h3>
-                </span>
-                <span>
-                    <i className="devicon-mongodb-plain" />
-                    <h3>MongoDB</h3>
-                </span>
-                <span>
-                    <i className="devicon-git-plain" />
-                    <h3>Git</h3>
-                </span>
-                <span>
-                    <i className="devicon-linux-plain" />
-                    <h3>Linux</h3>
-                </span>
-                <span>
-                    <i className="devicon-photoshop-plain" />
-                    <h3>Photoshop</h3>
-                </span>
+        <section className="is-max-desktop">
+            <div className="container">
+                <h1 className="is-size-2-mobile is-size-3-desktop">Bio</h1>
+                <div id="bio-icons">
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                        iconTitle="HTML"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                        iconTitle="CSS"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        iconTitle="Javascript"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        iconTitle="React"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        iconTitle="Node"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                        iconTitle="Express"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        iconTitle="Python"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                        iconTitle="MongoDB"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                        iconTitle="Git"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                        iconTitle="Linux"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                        iconTitle="Photoshop"
+                    />
+                </div>
             </div>
-           
-        </div>
+        </section>
     )
 
 };
 
 export default Bio;
-
-/* column is-one-third-desktop is-5-mobile */
