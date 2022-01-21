@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useStickyState from "../../utils/useStickyState";
 import styles from "./Navbar.module.css";
+import Logo from "../Logo/Logo";
 
 const Navbar = () => {
 
@@ -26,11 +27,7 @@ const Navbar = () => {
         <nav className="navbar is-flex is-align-items-center is-transparent">
             <div className="navbar-brand">
                 <a href="/" id="logo-container" className="navbar-item">
-                    <span className={styles.logo}>
-                        <div className="is-size-7 has-text-weight-light is-hidden-mobile">JACOB</div>
-                        <span>J<span className={styles.mirroredLetter}>J</span></span>
-                        <div className="is-size-7 has-text-weight-light is-hidden-mobile">LINDSEY</div>
-                    </span>
+                    <Logo />
                 </a>
             </div>
             <button

@@ -1,0 +1,49 @@
+.logo {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--logo-color);
+    display: flex;
+    font-size: 2rem !important;
+    font-weight: 800;
+    padding: 0.1rem 0.75rem;
+    text-decoration: none;
+}
+
+.logo div {
+    font-weight: 700 !important;
+}
+
+.logo span {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    transform: scaleX(1.6);
+}
+
+.mirroredLetter {
+    display: inline-block;
+    transform: scaleX(-1) !important;
+}
+
+@media screen and (min-width: 768px) {
+
+    .logo {
+        font-size: 3rem;
+        font-weight: 800;
+        gap: 0;
+        text-decoration: none;
+    }
+    
+    .logo span {
+        transform: scaleX(1.6);
+    }
+    
+    .mirroredLetter {
+        display: inline-block;
+        transform: scaleX(-1) !important;
+    }
+    
+    .logoSubtext {
+        color: var(--text-color);
+        font-size: .66rem;
+        visibility: visible;
+    }
+}
