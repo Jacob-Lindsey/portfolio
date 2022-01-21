@@ -17,7 +17,8 @@
   --text-color: #111;
   --header-bg-color: #e7e7e7;
   --overlay-color: #888;
-  --logo-color: #08001f;
+  --logo-color: #0e387a;
+  --logo-border-color: transparent;
   --input-color: transparent;
   --input-border-color: rgba(112, 112, 112, 0.4);
   --placeholder-color: rgb(177, 177, 177);
@@ -43,7 +44,8 @@ html.theme-transition *::after {
   --text-color: #eee;
   --header-bg-color: #161616;
   --overlay-color: #101010;
-  --logo-color: #f0e164;
+  --logo-color: #9fafca;
+  --logo-border-color: #0e387a;
   --input-color: #171717;
   --input-border-color: rgba(141, 140, 140, 0.4);
   --placeholder-color: rgb(56, 56, 56);
@@ -59,7 +61,7 @@ html, body {
   color: var(--text-color);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif,'Nunito Sans', sans-serif;
   height: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -86,6 +88,11 @@ img, picture, video, canvas, svg {
   font-family: 'Font Awesome 5 Free' !important;
   font-size: 11px;
   position: absolute !important;
+}
+
+#contact-phone-icon,
+#contact-email-icon {
+  font-size: 1.6rem !important;
 }
 
 a {
@@ -126,12 +133,20 @@ label {
   isolation: isolate;
 }
 
+section {
+  padding: 0 2rem;
+}
+
 .is-transparent {
   background-color: transparent !important;
 }
 
 .navbar-menu {
   display: inherit !important;
+}
+
+#logo-container:hover {
+  border-bottom: 1px solid transparent !important;
 }
 
 .card {
@@ -155,8 +170,8 @@ label {
 }
 
 .project-grid {
-  row-gap: 40px;
-  grid-row-gap: 40px;
+  row-gap: 60px;
+  grid-row-gap: 60px;
   margin-top: 6rem;
 }
 
@@ -207,17 +222,54 @@ label {
   margin-top: 0.5rem;
 }
 
+.contact-grid {
+  padding: 3rem 0;
+  row-gap: 40px;
+}
+
+#contact-form {
+  width: 100%;
+}
+
+.contact-info-link {
+  color: rgb(9, 140, 228) !important;
+  font-weight: 600;
+}
+
+.contact-info-link:hover {
+  border-bottom: none !important;
+}
+
+.tagline {
+  justify-self: center;
+  max-width: 20rem;
+}
+
 @media screen and (min-width: 768px) {
+  
+  section {
+    padding: 0;
+  }
+
+  #portfolio {
+    padding: 0 4%;
+  }
+
   #bio-icons div {
     height: 200px;
     width: 200px;
   }
 
   .project-grid {
-    column-gap: 20px;
-    grid-column-gap: 20px;
-
+    column-gap: 40px;
+    grid-column-gap: 40px;
   }
+
+  #contact-phone-icon,
+  #contact-email-icon {
+    font-size: 2rem !important;
+  }
+
 } 
 
 @media screen and (min-width: 1024px) {
@@ -257,6 +309,19 @@ label {
   #bio-icons div img {
     height: 75px;
     width: 75px;
+  }
+
+  #contact-form {
+    width: 50%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 70%;
+  }
+
+  .tagline:last-child {
+    grid-column: span 2;
   }
 
   .project-grid {

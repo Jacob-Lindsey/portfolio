@@ -25,10 +25,11 @@ const Navbar = () => {
     return (
         <nav className="navbar is-flex is-align-items-center is-transparent">
             <div className="navbar-brand">
-                <a href="/" className="navbar-item">
+                <a href="/" id="logo-container" className="navbar-item">
                     <span className={styles.logo}>
+                        <div className="is-size-7 has-text-weight-light is-hidden-mobile">JACOB</div>
                         <span>J<span className={styles.mirroredLetter}>J</span></span>
-                        <div className="is-size-7-mobile is-size-6 is-hidden-mobile">JACOB LINDSEY</div>
+                        <div className="is-size-7 has-text-weight-light is-hidden-mobile">LINDSEY</div>
                     </span>
                 </a>
             </div>
