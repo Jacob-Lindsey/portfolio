@@ -11,11 +11,11 @@
 }
 
 :root {
-  --bg-color: #e7e7e7;
+  --bg-color: #e4e0dc;
   --bg-color-lighter: hsl(0, 0%, 89%);
   --bg-color-lightest: hsl(0, 0%, 84%);
   --text-color: #111;
-  --header-bg-color: #e7e7e7;
+  --header-bg-color: #e2e1de;
   --overlay-color: #888;
   --logo-color: #0e387a;
   --logo-border-color: transparent;
@@ -150,14 +150,21 @@ section {
 }
 
 .card {
-  color: #e7e7e7 !important;
+  background-color: transparent !important;
+  color: var(--text-color) !important;
 }
 
 .card-footer-item {
   border-bottom: 2px solid transparent !important;
+  transition: all 0.2s ease;
+}
+
+.card-footer-item:hover {
+  background-color: rgba(46, 67, 161, 0.432);
 }
 
 .project-image {
+  max-height: 400px;
   width: 100%;
 }
 
@@ -183,10 +190,6 @@ section {
   border-radius: 10px 10px 0 0 !important;
 }
 
-.card {
-  background-color: rgb(35, 35, 59);
-}
- 
 #bio-icons {
   column-gap: 20px;
   grid-column-gap: 20px;
@@ -223,7 +226,6 @@ section {
 }
 
 .contact-grid {
-  padding: 3rem 0;
   row-gap: 40px;
 }
 

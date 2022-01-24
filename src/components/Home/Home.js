@@ -7,25 +7,27 @@ const Home = () => {
     const lineRef = useRef(null);
     const typed = useRef(null);
 
-
     useEffect(() => {
-        const options = {
-            strings: ['My name is Jacob Lindsey', 'Front-end web developer', 'Please take a look around.'],
-            typeSpeed: 50,
-            backSpeed: 15,
-            startDelay: 1000,
-        };
 
-        typed.current = new Typed(lineRef.current, options);
+        if (localStorage.getItem("hasVisited")) {
+            return;
+        } else {
+            const options = {
+                strings: ['My name is Jacob Lindsey', 'Front-end web developer', 'Please take a look around.'],
+                typeSpeed: 50,
+                backSpeed: 15,
+                startDelay: 1000,
+            };
+            
+            typed.current = new Typed(lineRef.current, options);
+            localStorage.setItem("hasVisited", "true");
 
-        return () => {
-            typed.current.destroy();
+            return () => {
+                typed.current.destroy();
+            }
         }
     }, []);
 
-    
-    
-    
     return (
         <div className="wrap">
             <div className="type-wrap">
@@ -33,7 +35,6 @@ const Home = () => {
             </div>
         </div>
     )
-
 };
 
 export default Home;

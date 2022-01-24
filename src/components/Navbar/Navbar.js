@@ -51,9 +51,9 @@ const Navbar = () => {
                         </div>
                     </li>
                     <li className="navbar-item is-clickable" onClick={() => setExpanded(false)}><Link to="/">HOME</Link></li>
-                    <li className="navbar-item is-clickable" onClick={() => setExpanded(false)}><Link to="bio">BIO</Link></li>
+                    <li className="navbar-item is-clickable" onClick={() => setExpanded(false)}><Link to="skills">SKILLS</Link></li>
                     <li className="navbar-item is-clickable" onClick={() => setExpanded(false)}><Link to="contact">CONTACT</Link></li>
-                    <li className="navbar-item is-clickable" onClick={() => setExpanded(false)}><Link to="portfolio">PORTFOLIO</Link></li>
+                    <li className="navbar-item is-clickable" onClick={() => setExpanded(false)}><Link to="portfolio">PROJECTS</Link></li>
                 </ul>
             </div>
         </nav>

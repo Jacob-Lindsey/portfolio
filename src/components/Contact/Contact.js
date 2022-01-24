@@ -1,4 +1,4 @@
-import Form from '../Form/Form';
+/* import Form from '../Form/Form'; */
 
 const Contact = () => {
 
@@ -7,7 +7,9 @@ const Contact = () => {
         <section id="contact" className='is-flex is-flex-direction-column is-align-items-center pt-5'>
             <h1 className="is-size-3">CONTACT ME</h1>
             
-            <div className='is-grid contact-grid'>
+            <p className="my-5">Please feel free to reach out to me to learn, or discuss more about me. I look forward to hearing from you.</p>
+
+            <div className='is-grid contact-grid my-6'>
                 
                 <div className='container is-flex is-flex-direction-column is-align-items-center'>
                     <span className="icon is-medium">
@@ -31,11 +33,11 @@ const Contact = () => {
                     <a href='mailto:jacob.lindsey88@gmail.com' className='contact-info-link'>jacob.lindsey88@gmail.com</a>
                 </div>
 
-                <p className='tagline'>
+                {/* <p className='tagline'>
                     Or simply leave me a message below!
-                </p>
+                </p> */}
             </div>
-            <Form />
+            {/* <Form /> */}
         </section>
 
     )

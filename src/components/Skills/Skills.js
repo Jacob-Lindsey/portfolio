@@ -1,10 +1,10 @@
 import SkillIcon from "../SkillIcon/SkillIcon";
 
-const Bio = () => {    
+const Skills = () => {    
 
     return (
         <section id="bio" className="is-max-desktop">
-            <h1 className="is-size-2-mobile is-size-3-desktop">BIO</h1>
+            <h1 className="is-size-2-mobile is-size-3-desktop">SKILLS</h1>
             <div className="container">
                 <div id="bio-icons" className="is-grid">
                     <SkillIcon 
@@ -58,4 +58,4 @@ const Bio = () => {
 
 };
 
-export default Bio;
+export default Skills;
