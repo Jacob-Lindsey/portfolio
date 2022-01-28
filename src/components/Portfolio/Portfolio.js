@@ -8,6 +8,11 @@ const Portfolio = () => {
             <div className="container">
                 <div className="is-grid project-grid">
                     <Card
+                        screenshotURL="/invoice-1.png"
+                        liveURL="https://n-voice.netlify.app/"
+                        githubURL="https://github.com/Jacob-Lindsey/invoice-app"
+                    />
+                    <Card
                         screenshotURL="/craps-screen.png"
                         liveURL="https://craps--game.herokuapp.com/"
                         githubURL="https://github.com/Jacob-Lindsey/craps-game-client"
