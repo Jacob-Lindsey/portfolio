@@ -11,22 +11,22 @@
 }
 
 :root {
-  --bg-color: #e4e0dc;
+  --bg-color: hsl(30, 13%, 88%);
   --bg-color-lighter: hsl(0, 0%, 89%);
   --bg-color-lightest: hsl(0, 0%, 84%);
-  --text-color: #111;
-  --header-bg-color: #e2e1de;
-  --overlay-color: #888;
-  --logo-color: #0e387a;
+  --text-color: hsl(0, 0%, 7%);
+  --header-bg-color: hsl(45, 6%, 88%);
+  --overlay-color: hsl(0, 0%, 53%);
+  --logo-color: hsl(217, 79%, 27%);
   --logo-border-color: transparent;
   --input-color: transparent;
-  --input-border-color: rgba(112, 112, 112, 0.4);
-  --placeholder-color: rgb(177, 177, 177);
-  --checkbox-bg-color: rgb(33,33,33);
+  --input-border-color: hsla(0, 0%, 44%, 0.4);
+  --placeholder-color: hsl(0, 0%, 69%);
+  --checkbox-bg-color: hsl(0, 0%, 13%);
   --toggle-icon: "\f185";
-  --toggle-icon-bg-color: rgb(211, 211, 211);
-  --toggle-icon-color: rgb(136, 88, 0);
-  --link-hover-color: rgb(23, 29, 80);
+  --toggle-icon-bg-color: hsl(0, 0%, 83%);
+  --toggle-icon-color: hsl(39, 100%, 27%);
+  --link-hover-color: hsl(234, 55%, 20%);
 }
 
 html.theme-transition,
@@ -38,22 +38,22 @@ html.theme-transition *::after {
 }
 
 [data-theme="dark"] {
-  --bg-color: #161616;
+  --bg-color: hsl(0, 0%, 9%);
   --bg-color-lighter: hsl(0, 0%, 13%);
   --bg-color-lightest: hsl(0, 0%, 18%);
-  --text-color: #eee;
-  --header-bg-color: #161616;
-  --overlay-color: #101010;
-  --logo-color: #9fafca;
-  --logo-border-color: #0e387a;
-  --input-color: #171717;
-  --input-border-color: rgba(141, 140, 140, 0.4);
-  --placeholder-color: rgb(56, 56, 56);
-  --checkbox-bg-color: #485fc7;
+  --text-color: hsl(0, 0%, 93%);
+  --header-bg-color: hsl(0, 0%, 9%);
+  --overlay-color: hsl(0, 0%, 6%);
+  --logo-color: hsl(218, 29%, 71%);
+  --logo-border-color: hsl(217, 79%, 27%);
+  --input-color: hsl(0, 0%, 9%);
+  --input-border-color: hsla(0, 0%, 55%, 0.4);
+  --placeholder-color: hsl(0, 0%, 22%);
+  --checkbox-bg-color: hsl(229, 53%, 53%);
   --toggle-icon: "\f186";
-  --toggle-icon-bg-color: rgb(204, 204, 204);
-  --toggle-icon-color: rgb(59, 0, 153);
-  --link-hover-color: rgb(141, 214, 243);
+  --toggle-icon-bg-color: hsl(0, 0%, 80%);
+  --toggle-icon-color: hsl(263, 100%, 30%);
+  --link-hover-color: hsl(197, 81%, 75%);
 }
 
 html, body {
@@ -64,6 +64,7 @@ html, body {
     sans-serif,'Nunito Sans', sans-serif;
   height: 100%;
   line-height: 1.5;
+  overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -71,6 +72,25 @@ html, body {
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
+}
+
+.typed {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 .switch+label {
@@ -155,18 +175,27 @@ section {
 }
 
 .card-footer-item {
-  border-bottom: 2px solid transparent !important;
-  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  padding-top: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .card-footer-item:hover {
-  background-color: rgba(46, 67, 161, 0.432);
+
 }
 
-.project-image {
+.project-image,
+.project-image-overlay {
   max-height: 400px;
+  transition: all 0.2s ease;
   width: 100%;
 }
+
+.project-image-overlay {
+  display: none;
+}
+
 
 .is-borderless {
   border: 0 !important;
@@ -179,7 +208,13 @@ section {
 .project-grid {
   row-gap: 60px;
   grid-row-gap: 60px;
-  margin-top: 6rem;
+  margin-top: 4rem;
+}
+
+.card-title {
+  font-size:  1.1em;
+  padding: 16px 0;
+  text-transform: uppercase;
 }
 
 #portfolio {
@@ -204,7 +239,7 @@ section {
 #bio-icons div {
   align-items: center;
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.301) -1px 0px 8px 0px;
+  box-shadow: hsla(0, 0%, 0%, 0.301) -1px 0px 8px 0px;
   display: flex;
   flex-direction: column;
   height: 150px;
@@ -234,7 +269,7 @@ section {
 }
 
 .contact-info-link {
-  color: rgb(9, 140, 228) !important;
+  color: hsl(204, 92%, 46%) !important;
   font-weight: 600;
 }
 
@@ -265,6 +300,40 @@ section {
   .project-grid {
     column-gap: 40px;
     grid-column-gap: 40px;
+    margin-top: 6rem;
+  }
+
+  .card-title {
+    display: none;
+  }
+
+  .project-image,
+  .project-image-overlay {
+    max-height: 400px;
+  }
+
+  .project-image-overlay {
+    align-items: center;
+    background-color: var(--text-color);
+    border-radius: 10px 10px 0 0;
+    color: var(--bg-color);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+  }
+
+  .project-image-overlay:hover {
+    opacity: .85;
+  }
+
+  .project-image-overlay h1 {
+    font-size: 2rem;
+    font-weight: 700;
   }
 
   #contact-phone-icon,
@@ -338,4 +407,8 @@ section {
 
 .express {
   filter: invert(100%) !important;
+}
+
+.typed-cursor {
+  font-size: 32px;
 }
