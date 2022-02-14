@@ -7,7 +7,7 @@ const Contact = () => {
         <section id="contact" className='is-flex is-flex-direction-column is-align-items-center pt-5'>
             <h1 className="is-size-3">CONTACT ME</h1>
             
-            <p className="my-5">Please feel free to reach out to me to learn, or discuss more about me. I look forward to hearing from you.</p>
+            <p className="my-5">Please feel free to reach out at any time to learn more. I look forward to hearing from you.</p>
 
             <div className='is-grid contact-grid my-6'>
                 
@@ -17,7 +17,7 @@ const Contact = () => {
                     </span>
                     <h3>Phone</h3>
                     <p className='tagline'>
-                        I can be reached by phone from 8am-8pm EST Monday thru Friday
+                        I can be reached by phone from 9am-9pm CST Monday-Friday
                     </p>
                     <a href='tel:314-960-2551' className='contact-info-link'>314-960-2551</a>
                 </div>

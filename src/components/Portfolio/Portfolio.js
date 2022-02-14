@@ -7,7 +7,7 @@ const Portfolio = () => {
             <h1 className="is-size-2-mobile is-size-3-desktop">PROJECTS</h1>
             <div className="container">
                 <div className="is-grid project-grid">
-                    <div>
+                    <div className="grid-item">
                         <h1 className="card-title">Invoice App</h1>
                         <Card
                             title="Invoice App"
@@ -16,7 +16,7 @@ const Portfolio = () => {
                             githubURL="https://github.com/Jacob-Lindsey/invoice-app"
                         />
                     </div>
-                    <div>
+                    <div className="grid-item">
                         <h1 className="card-title">Craps Game</h1>
                         <Card
                             title="Craps Game"
@@ -25,7 +25,7 @@ const Portfolio = () => {
                             githubURL="https://github.com/Jacob-Lindsey/craps-game-client"
                         />
                     </div>
-                    <div>
+                    <div className="grid-item">
                         <h1 className="card-title">Personal Blog</h1>
                         <Card
                             title="Personal Blog"
@@ -34,7 +34,7 @@ const Portfolio = () => {
                             githubURL="https://github.com/Jacob-Lindsey/personal-blog"
                         />
                     </div>
-                    <div>
+                    <div className="grid-item">
                         <h1 className="card-title">Codebreaker Game</h1>
                         <Card
                             title="Codebreaker Game"
@@ -43,7 +43,7 @@ const Portfolio = () => {
                             githubURL="https://github.com/Jacob-Lindsey/unlock-it"
                         />
                     </div>
-                    <div>
+                    <div className="grid-item">
                         <h1 className="card-title">Formula-1 Race Results</h1>
                         <Card
                             title="Formula-1 Race Results"

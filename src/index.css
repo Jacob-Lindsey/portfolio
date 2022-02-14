@@ -116,7 +116,7 @@ img, picture, video, canvas, svg {
 }
 
 a {
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   color: inherit;
   text-decoration: none;
 }
@@ -172,6 +172,7 @@ section {
 .card {
   background-color: transparent !important;
   color: var(--text-color) !important;
+  max-width: 556px;
 }
 
 .card-footer-item {
@@ -209,6 +210,11 @@ section {
   row-gap: 60px;
   grid-row-gap: 60px;
   margin-top: 4rem;
+}
+
+.container {
+  display: flex !important;
+  justify-content: center;
 }
 
 .card-title {
@@ -301,6 +307,11 @@ section {
     column-gap: 40px;
     grid-column-gap: 40px;
     margin-top: 6rem;
+  }
+
+  .container {
+    display: flex !important;
+    justify-content: center;
   }
 
   .card-title {
@@ -398,6 +409,7 @@ section {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
 
 }
 
