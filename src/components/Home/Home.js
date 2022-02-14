@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
+import { HiDownload } from 'react-icons/hi';
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -45,7 +46,11 @@ const Home = () => {
                 <span className="is-size-3-desktop is-size-4-mobile" ref={lineRef} />
             </div>
             {animationDone ?
-                <section className={styles.homeWrapper}>HOME PAGE</section>
+                <section className={styles.homeWrapper}>
+                    <button className={styles.downloadButton}>
+                        <a href="/jacob-lindsey-resume.pdf" download alt="Download resume pdf"><HiDownload />Download Resume</a>
+                    </button>
+                </section>
                 :
                 null
             }
