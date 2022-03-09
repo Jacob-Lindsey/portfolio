@@ -1,5 +1,3 @@
-/* import Form from '../Form/Form'; */
-
 const Contact = () => {
 
     return (
@@ -39,9 +37,7 @@ const Contact = () => {
             </div>
             {/* <Form /> */}
         </section>
-
     )
-
 };
 
 export default Contact;

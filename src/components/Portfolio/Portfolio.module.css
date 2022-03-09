@@ -1,0 +1,38 @@
+#portfolio {
+    padding-top: 3rem;
+}
+
+.container {
+    display: flex !important;
+    justify-content: center;
+}
+  
+.grid {
+    display: grid;
+    row-gap: 60px;
+    grid-row-gap: 60px;
+    margin-top: 4rem;
+}
+
+.cardTitle {
+    font-size:  1.1em;
+    padding: 16px 0;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    #portfolio {
+        padding: 0 4%;
+    }
+
+    .grid {
+        column-gap: 40px;
+        grid-column-gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 6rem;
+    }
+
+    .cardTitle {
+        display: none;
+    }
+}

@@ -16,7 +16,7 @@
   --bg-color-lightest: hsl(0, 0%, 84%);
   --text-color: hsl(0, 0%, 7%);
   --header-bg-color: hsl(45, 6%, 88%);
-  --overlay-color: hsl(0, 0%, 53%);
+  --overlay-color: hsla(0, 0%, 7%, 0.479);
   --logo-color: hsl(217, 79%, 27%);
   --logo-border-color: transparent;
   --input-color: transparent;
@@ -43,7 +43,7 @@ html.theme-transition *::after {
   --bg-color-lightest: hsl(0, 0%, 18%);
   --text-color: hsl(0, 0%, 93%);
   --header-bg-color: hsl(0, 0%, 9%);
-  --overlay-color: hsl(0, 0%, 6%);
+  --overlay-color: hsla(0, 0%, 93%, 0.61);
   --logo-color: hsl(218, 29%, 71%);
   --logo-border-color: hsl(217, 79%, 27%);
   --input-color: hsl(0, 0%, 9%);
@@ -197,7 +197,6 @@ section {
   display: none;
 }
 
-
 .is-borderless {
   border: 0 !important;
 }
@@ -318,16 +317,10 @@ section {
     display: none;
   }
 
-  .project-image,
-  .project-image-overlay {
-    max-height: 400px;
-  }
-
   .project-image-overlay {
     align-items: center;
-    background-color: var(--text-color);
     border-radius: 10px 10px 0 0;
-    color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     height: 100%;
     justify-content: center;
@@ -336,10 +329,16 @@ section {
     position: absolute;
     text-transform: uppercase;
     top: 0;
+    z-index: 1;
   }
 
   .project-image-overlay:hover {
-    opacity: .85;
+    opacity: 1;
+  }
+
+  .project-image-overlay:hover + .project-image {
+    filter: blur(2px);
+    opacity: 0.2;
   }
 
   .project-image-overlay h1 {
@@ -347,11 +346,18 @@ section {
     font-weight: 700;
   }
 
+  .project-image {
+    max-height: 400px;
+  }
+
+  .project-image-overlay {
+    max-height: 200px;
+  }
+
   #contact-phone-icon,
   #contact-email-icon {
     font-size: 2rem !important;
   }
-
 } 
 
 @media screen and (min-width: 1024px) {
@@ -408,10 +414,17 @@ section {
 
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  
+  }  
 
 }
+
+@media screen and (min-width: 1408px) {
+  .container {
+    max-width: 1152px !important;
+  }
+}
+
+
 
 .icon-transition {
   transition: all 0.3s ease !important;

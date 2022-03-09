@@ -18,7 +18,6 @@ const SkillIcon = (props) => {
             <h3>{iconTitle}</h3>
         </div>
     )
-
 };
 
 export default SkillIcon;

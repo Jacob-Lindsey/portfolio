@@ -41,8 +41,8 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="wrap">
-            <div className="type-wrap">
+        <div>
+            <div>
                 <span className="is-size-3-desktop is-size-4-mobile" ref={lineRef} />
             </div>
             {animationDone ?

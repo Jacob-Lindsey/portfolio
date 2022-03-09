@@ -5,9 +5,8 @@ const Card = (props) => {
     const liveURL = props.liveURL;
     const githubURL = props.githubURL;
 
-    return (
-        
-        <div className="container">
+    return (   
+        <div>
             <div className="card">
                 <div className="project-image-overlay"><h1>{title}</h1></div>
                 <img src={screenshotURL} className="project-image has-radius-10" alt="" />
@@ -20,11 +19,8 @@ const Card = (props) => {
                     </span>
                 </footer>
             </div>
-            
         </div>
-
     )
-
 };
 
 export default Card;

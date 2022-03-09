@@ -17,6 +17,15 @@ const Portfolio = () => {
                         />
                     </div>
                     <div className="grid-item">
+                        <h1 className="card-title">Sock-Chat</h1>
+                        <Card
+                            title="Sock Chat App"
+                            screenshotURL="/chat-screen.png"
+                            liveURL="https://ssockchat.herokuapp.com/"
+                            githubURL="https://github.com/Jacob-Lindsey/socket-chat"
+                        />
+                    </div>
+                    <div className="grid-item">
                         <h1 className="card-title">Craps Game</h1>
                         <Card
                             title="Craps Game"
