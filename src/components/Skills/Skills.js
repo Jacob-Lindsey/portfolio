@@ -20,6 +20,10 @@ const Skills = () => {
                         iconTitle="Javascript"
                     />
                     <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        iconTitle="Typescript"
+                    />
+                    <SkillIcon 
                         iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                         iconTitle="React"
                     />
@@ -44,12 +48,28 @@ const Skills = () => {
                         iconTitle="Git"
                     />
                     <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+                        iconTitle="NPM"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
+                        iconTitle="Webpack"
+                    />
+                    <SkillIcon 
                         iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
                         iconTitle="Linux"
                     />
                     <SkillIcon 
                         iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
                         iconTitle="Photoshop"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg"
+                        iconTitle="After Effects"
+                    />
+                    <SkillIcon 
+                        iconURL="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+                        iconTitle="Unity"
                     />
                 </div>
             </div>

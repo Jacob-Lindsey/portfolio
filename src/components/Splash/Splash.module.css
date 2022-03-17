@@ -1,0 +1,123 @@
+.mainLogo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .logoAnimationWrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 12%;
+    
+  }
+  
+  .logoAnimation {
+    pointer-events: none;
+    overflow: visible;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 240px;
+    margin: -120px 0 0 -500px;
+    transform: scale(.633333);
+  }
+  
+  .animeLogo {
+    overflow: visible;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 120px;
+  }
+  
+  .animeLogoSigns {
+    overflow: visible;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 512px;
+    margin-top: -352px;
+  }
+  
+  .logoLetter {
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .bounced {
+    transform-origin: 50% 100% 0px;
+    transform: translateY(200px) scaleX(.55) scaleY(.8);
+  }
+  
+  .logoAnimation .bounce {
+    overflow: visible;
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    /*stroke: red;*/
+  }
+  
+  .logoAnimation .dot {
+    opacity: 0.001;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    background-color: currentColor;
+    transform: translate3d(0,0,0);
+  }
+  
+  .logoAnimation .logoLetter svg {
+    overflow: visible;
+    fill: none;
+    fill-rule: evenodd;
+  }
+  
+  .logoAnimation .line {
+    fill: none;
+    fill-rule: evenodd;
+    stroke-linecap: square;
+    stroke-width: 40;
+    stroke: currentColor;
+  }
+  
+  .logoAnimation .fill {
+    opacity: .001;
+    stroke: currentColor;
+    stroke-width: 40px;
+  }
+  
+  .logoText {
+    opacity: .001;
+    margin-top: .25em;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: .125em;
+    text-align: justify;
+    word-break: keep-all;
+  }
+  
+  .logoText:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+  }

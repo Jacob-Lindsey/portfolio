@@ -34,6 +34,11 @@
     
     .logo span {
         transform: scaleX(1.6);
+        transition: color 0.2s ease;
+    }
+
+    .logo:hover span {
+        color: var(--checkbox-bg-color);
     }
     
     .mirroredLetter {

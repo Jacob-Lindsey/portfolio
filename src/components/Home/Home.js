@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
-import { HiDownload } from 'react-icons/hi';
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -9,6 +9,8 @@ const Home = () => {
 
     const lineRef = useRef(null);
     const typed = useRef(null);
+
+    let navigate = useNavigate();
 
     useEffect(() => {
 
@@ -28,7 +30,8 @@ const Home = () => {
                         document.querySelector(".typed-cursor").classList.remove("typed-cursor--blink");
                         setTimeout(() => {
                             setAnimationDone(true);
-                        }, 1500);
+                            navigate("/portfolio");
+                        }, 2000);
                     }, 1000);
                     return () => {
                         typed.current.destroy();
@@ -47,9 +50,6 @@ const Home = () => {
             </div>
             {animationDone ?
                 <section className={styles.homeWrapper}>
-                    <button className={styles.downloadButton}>
-                        <a href="/jacob-lindsey-resume.pdf" download alt="Download resume pdf"><HiDownload />Download Resume</a>
-                    </button>
                 </section>
                 :
                 null
